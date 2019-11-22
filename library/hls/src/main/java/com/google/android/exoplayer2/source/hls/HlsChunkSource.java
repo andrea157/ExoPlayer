@@ -291,7 +291,6 @@ import java.util.Map;
     if (chunkMediaSequence < mediaPlaylist.mediaSequence) {
       //TODO STD SOLUTION fatalError = new BehindLiveWindowException();
       //TODO STD SOLUTION return;
-      fatalError = new RaiBehindLiveWindowException();
       chunkMediaSequence = mediaPlaylist.mediaSequence + 2;
     }
 
