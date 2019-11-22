@@ -289,8 +289,10 @@ import java.util.Map;
     }
 
     if (chunkMediaSequence < mediaPlaylist.mediaSequence) {
-      fatalError = new BehindLiveWindowException();
-      return;
+      //TODO STD SOLUTION fatalError = new BehindLiveWindowException();
+      //TODO STD SOLUTION return;
+      fatalError = new RaiBehindLiveWindowException();
+      chunkMediaSequence = mediaPlaylist.mediaSequence + 2;
     }
 
     int segmentIndexInPlaylist = (int) (chunkMediaSequence - mediaPlaylist.mediaSequence);
